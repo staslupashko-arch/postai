@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1251\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 import type \{ Metadata \} from "next";\
+import \{ Geist, Geist_Mono \} from "next/font/google";\
+import "./globals.css";\
+\
+const geistSans = Geist(\{\
+  variable: "--font-geist-sans",\
+  subsets: ["latin"],\
+\});\
+\
+const geistMono = Geist_Mono(\{\
+  variable: "--font-geist-mono",\
+  subsets: ["latin"],\
+\});\
+\
+export const metadata: Metadata = \{\
+  title: "PostAI \'97 AI Agent for Social Media Posts",\
+  description: "Craft perfect social media posts in seconds. PostAI writes engaging content for Twitter, LinkedIn, Instagram and more \'97 in your unique voice.",\
+\};\
+\
+export default function RootLayout(\{\
+  children,\
+\}: Readonly<\{\
+  children: React.ReactNode;\
+\}>) \{\
+  return (\
+    <html lang="en" className=\{`$\{geistSans.variable\} $\{geistMono.variable\} h-full antialiased`\}>\
+      <body className="min-h-full flex flex-col bg-[#0a0a0a] text-white">\{children\}</body>\
+    </html>\
+  );\
+\}}
